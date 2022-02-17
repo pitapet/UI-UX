@@ -22,11 +22,11 @@
   --color-bg-green: #20495c;
 
   /* Font size */
-  --font-large: 48px;
-  --font-medium: 28px;
-  --font-regular: 18px;
-  --font-small: 16px;
-  --font-micro: 14px;
+  --font-large: 50px;
+  --font-medium: 30px;
+  --font-regular: 23px;
+  --font-small: 20px;
+  --font-micro: 13px;
 
   /* Font weight */
   --weight-bold: 700;
@@ -129,7 +129,7 @@ body,
 .header__menu {
   display: flex;
   align-items: center;
-  font-size: 30px;
+  font-size: var(--font-medium);
 }
 
 .header__menu li {
@@ -190,12 +190,12 @@ i {
 }
 
 .main__header__categories p {
-  font-size: 30px;
+  font-size: var(--font-medium);
   border-bottom: 1px solid black;
 }
 
 .main__header__categories li {
-  font-size: 23px;
+  font-size: var(--font-regular);
   margin-top: 18px;
   background: #ffffff;
   border-radius: 4px;
@@ -211,12 +211,12 @@ i {
 }
 
 .main__header__best > p {
-  font-size: 30px;
+  font-size: var(--font-medium);
   border-bottom: 1px solid black;
 }
 
 .main__header__best div {
-  font-size: 20px;
+  font-size: var(--font-small);
   margin-top: 8%;
   background: #ffffff;
   border-radius: 4px;
@@ -225,7 +225,7 @@ i {
 }
 
 .main__header__best div span {
-  font-size: 13px;
+  font-size: var(--font-micro);
   color: gray;
   margin-left: 3%;
 }
@@ -257,7 +257,7 @@ i {
 }
 
 .main__home__categories p {
-  font-size: 50px;
+  font-size: var(--font-large);
   border-bottom: 1px solid gray;
   margin-bottom: 5px;
 }
@@ -325,7 +325,7 @@ i {
 }
 
 .two__div__description p {
-  font-size: 20px;
+  font-size: var(--font-medium);
   margin-bottom: 6px;
 }
 
@@ -341,7 +341,7 @@ i {
 
 .two__div__footer span {
   padding-left: 5px;
-  font-size: 14px;
+  font-size: var(--font-micro);
 }
 
 .article__two img {
@@ -349,4 +349,26 @@ i {
   height: 60px;
   border-radius: 50%;
   border: 1px solid;
+}
+
+@media screen and (max-width: 2559px) {
+  /* Global */
+:root {
+  /* Font size */
+  --font-large: 40px;
+  --font-medium: 20px;
+  --font-regular: 15px;
+  --font-small: 13px;
+  --font-micro: 10px;
+}
+.main {
+  height: 90vh;
+}
+
+.article__one img {
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+}
+
 }

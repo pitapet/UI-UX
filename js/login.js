@@ -11,7 +11,7 @@ toggle = () => {
 
 setTimeout(() => {
   container.classList.add("sign-in");
-}, 200);
+}, 100);
 
 // $("document").ready(() => {
 //   var area0 = [

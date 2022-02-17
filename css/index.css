@@ -88,6 +88,17 @@ body {
   -webkit-transform: translate3d(0, 0, 0);
 }
 
+html,
+body,
+#fullpage,
+.section,
+.slide,
+.fp-tableCell {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f2f2f2;
+}
+
 i {
   position: absolute;
   top: 85%;
@@ -133,7 +144,7 @@ i {
 .header__menu {
   display: flex;
   align-items: center;
-  font-size: 30px;
+  font-size: var(--font-medium);
 }
 
 .header__menu li {
@@ -240,4 +251,18 @@ section p {
 section span {
   font-size: 20px;
   pointer-events: none;
+}
+
+@media screen and (max-width: 2559px) {
+  /* Global */
+:root {
+  /* Font size */
+  --font-large: 40px;
+  --font-medium: 20px;
+  --font-regular: 15px;
+  --font-small: 13px;
+  --font-micro: 10px;
+}
+
+
 }

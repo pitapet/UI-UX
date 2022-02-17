@@ -14,5 +14,8 @@ $(document).ready(function () {
     afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
       console.log("Slide No : " + index);
     },
+    afterRender: function () {
+      $("html").animate({ opacity: 1 }, 1000);
+    },
   });
 });

@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="css/plugin/jquery.fullPage.css" />
-    <link rel="stylesheet" href="css/mypage.css" />
+    <link rel="stylesheet" href="css/cart.css" />
     <script src="https://kit.fontawesome.com/91b5983e4b.js" crossorigin="anonymous"></script>
     <script src="js/plugin/jquery-3.6.0.min.js"></script>
     <script src="js/plugin/jquery.fullPage.js"></script>
-    <script src="js/mypage.js"></script>
+    <script src="js/cart.js"></script>
   </head>
   <body>
     <header id="header">
@@ -42,22 +42,22 @@
             </div>
             <div class="main__user__body">
               <div class="main__user__body__category">
-                <button class="category board active" onclick="location.href='./mypage.html';">게시글 관리</button>
-                <button class="category cart" onclick="location.href='./cart.html';">장바구니</button>
+                <button class="category board" onclick="location.href='./mypage.html';">게시글 관리</button>
+                <button class="category cart active" onclick="location.href='./cart.html';">장바구니</button>
                 <button class="category prefernce" onclick="location.href='./profileEdit.html';">정보 수정</button>
                 <button class="category resign" onclick="location.href='${ path }/';">회원 탈퇴</button>
               </div>
 
               <div class="main__user__body__product">
-                <p>게시글 관리</p>
+                <p>장바구니</p>
                 <table class="main__user__body__table">
                   <thead>
                     <tr>
                       <th class="table__sel">선택</th>
                       <th class="table__no">번호</th>
                       <th class="table__category">카테고리</th>
-                      <th class="table__title">제목</th>
-                      <th class="table__enroll">날짜</th>
+                      <th class="table__title">상품명</th>
+                      <th class="table__enroll">가격</th>
                       <th class="table__hits">조회수</th>
                       <th class="table__change">수정</th>
                     </tr>
@@ -71,23 +71,23 @@
                     </tbody>
                   </c:if> -->
 
-                  <c:if test="${ !empty list }">
-                    <tbody class="table__tbody">
-                      <c:forEach var="board" items="${ list }">
-                        <tr>
-                          <td><input type="checkbox" name="check" value="${ board.no }" /></td>
-                          <td>1</td>
-                          <td>자유게시글</td>
-                          <td>안녕하세요</td>
-                          <td>2022/03/01</td>
-                          <td>32</td>
-                          <td>
-                            <button onclick="location.href='${ pageContext.request.contextPath }/goods/update?no=${ board.no }'"><i class="far fa-edit"></i></button>
-                          </td>
-                        </tr>
-                      </c:forEach>
-                    </tbody>
-                  </c:if>
+                  <!-- <c:if test="${ !empty list }"> -->
+                  <tbody class="table__tbody">
+                    <!-- <c:forEach var="board" items="${ list }"> -->
+                    <tr>
+                      <td><input type="checkbox" name="check" value="2" /></td>
+                      <td>1</td>
+                      <td>자유게시글</td>
+                      <td>안녕하세요</td>
+                      <td>30,000</td>
+                      <td>32</td>
+                      <td>
+                        <button onclick="location.href='${ pageContext.request.contextPath }/goods/update?no=${ board.no }'"><i class="far fa-edit"></i></button>
+                      </td>
+                    </tr>
+                    <!-- </c:forEach> -->
+                  </tbody>
+                  <!-- </c:if> -->
                 </table>
 
                 <div id="pageBar">
@@ -116,7 +116,9 @@
                 </div>
 
                 <div class="product__btn">
-                  <button id="deletebtn">게시글 삭제</button>
+                  <span>charge : &nbsp;</span>
+                  <input class="charge" type="text" value="" disabled />
+                  <button id="buyBtn">구매</button>
                 </div>
               </div>
             </div>

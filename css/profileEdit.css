@@ -60,6 +60,14 @@ li {
   list-style: none;
 }
 
+button {
+  font-family: "Gowun Dodum", sans-serif;
+}
+
+input {
+  font-family: "Gowun Dodum", sans-serif;
+}
+
 a:link,
 a:visited,
 a:active {
@@ -129,41 +137,139 @@ body,
   list-style: none;
 }
 
-i {
-  position: absolute;
-  top: 85%;
-  font-size: 40px;
-  color: rgba(0, 0, 0, 0.5);
-  animation: upDown 1.4s infinite ease-in-out alternate;
-}
-
-@keyframes upDown {
-  from {
-    transform: translatey(0px);
-  }
-  to {
-    transform: translatey(-20px);
-  }
-}
-
-.section__wrapper {
-  display: grid;
-  max-width: 95%;
+/* User_Table */
+#main {
+  width: 40%;
+  height: 80%;
   margin: auto;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  
 }
 
-.organazation {
+.main_user {
+  width: 100%;
+  height: 100%;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
 }
 
-.organazation__description span {
-  font-size: 20px;
+.input-group {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: var(--gray-2);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 0.125rem solid white;
+  outline: none;
+}
+
+.input-group select {
+  width: 100%;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 0.125rem solid white;
+  outline: none;
+}
+
+.up input:focus {
+  border: 0.125rem solid #ff5757;
+}
+
+.btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.6rem 0;
+  border-radius: 0.5rem;
+  border: none;
+  color: black;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.sign-ups {
+  background-color: #fff7d1;
+}
+
+.input-group input::file-selector-button {
+  display: none;
+}
+
+.enroll__idcheck {
+  /* position: absolute; */
+  top: 6%;
+  right: 6%;
+  width: 20%;
+  padding: 2px;
+  font-size: 1rem;
+  background-color: #fff7d1;
+  border-radius: 0.5rem;
+  border: 0.125rem solid #fff7d1;
+  outline: none;
+}
+
+.form p {
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.profileimage {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid var(--color-white);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.filebox label {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: #999;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #fdfdfd;
+  cursor: pointer;
+  border: 1px solid #ebebeb;
+  border-bottom-color: #e2e2e2;
+  border-radius: 0.25em;
+}
+
+.filebox input[type="file"] {
+  /* 파일 필드 숨기기 */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 @media screen and (max-width: 2559px) {

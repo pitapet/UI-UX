@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="152x152" href="img/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/find.css" />
     <script src="https://kit.fontawesome.com/91b5983e4b.js" crossorigin="anonymous"></script>
     <script src="js/login.js" defer></script>
   </head>
@@ -24,48 +24,20 @@
             <form class="form sign-up" name="memberEnrollFrm" action="${ pageContext.request.contextPath }/QT/enroll" method="post">
               <div class="input-group up">
                 <i class="fas fa-user"></i>
-                <input type="text" name="userId" id="newId" placeholder="아이디" required />
+                <input type="text" name="userName" id="userName" placeholder="성함을 입력해주세요."  required />
               </div>
-              <input class="enroll__idcheck" type="button" id="checkDuplicate" value="중복검사" >
-              <div class="input-group up">
-                <i class="fas fa-lock"></i>
-                <input type="password" name="userPwd" id="pass1" placeholder="비밀번호" required />
-              </div>
-              <div class="input-group up">
-                <i class="fas fa-lock"></i>
-                <input type="password" id="pass2" placeholder="비밀번호 확인" required />
-              </div>
-              <div class="input-group up">
-                <i class="fas fa-user"></i>
-                <input type="text" name="userName" id="userName" placeholder="이름"  required />
-              </div>
-              <!-- <div class="input-group up">
-                <i class="fas fa-images"></i>
-                <input type="file" name="profile" id="profile" title="프로필사진" required />
-              </div> -->
+
               <div class="input-group up">
                 <i class="fas fa-mobile-alt"></i>
-                <input type="tel" name="phone" id="phone" maxlength="11" placeholder="전화번호" required />
+                <input type="tel" name="phone" id="phone" maxlength="11" placeholder="전화번호를 입력해주세요." required />
               </div>
               <div class="input-group up">
                 <i class="fas fa-envelope"></i>
-                <input type="email" name="email" id="email" placeholder="이메일" required />
+                <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요." required />
               </div>
-              <div class="input-group up">
-                <i class="fa-solid fa-paw"></i>
-                <select name="pets" id="pets">
-                  <option value="">애완동물</option>
-                  <option value="강아지">강아지</option>
-                  <option value="고양이">고양이</option>
-                  <option value="설치류">설치류</option>
-                  <option value="조류">조류</option>
-                  <option value="기타">기타</option>
-                </select>
-              </div>
-              <button class="btn sign-ups">회원가입</button>
+              <button class="btn sign-ups">아이디 찾기</button>
               <p>
-                <span> 이미 계정이 있으신가요? </span>
-                <b onclick="toggle()" class="pointer"> 로그인 </b>
+                <b onclick="toggle()" class="pointer"> 비밀번호가 기억 안나신다면! </b>
               </p>
               <p>
                 <b onclick="location.href='index.html'" style="cursor: pointer">메인으로 돌아가기</b>
@@ -80,23 +52,22 @@
             <form action="${ path }/QT/login" method="post" class="form sign-in">
               <div class="input-group in">
                 <i class="fas fa-user"></i>
-                <input type="text" name="userId" id="userId" value="" placeholder="아이디를 입력해주세요." />
+                <input type="text" name="userId" id="userId" value="" placeholder="아이디를 입력해주세요." required />
               </div>
-              <div class="input-group in">
-                <i class="fas fa-lock"></i>
-                <input type="password" name="userPwd" id="userPwd" placeholder="패스워드를 입력해주세요." />
+              <div class="input-group up">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요" required />
               </div>
-              <div class="login__save">
-                <input type="checkbox" name="saveId"/>
-                <span>아이디 자동 저장</span>
+              <div class="input-group up">
+                <i class="fas fa-mobile-alt"></i>
+                <input type="tel" name="phone" id="phone" maxlength="11" placeholder="전화번호를 입력해주세요." required />
               </div>
-              <input class="btn sign-ins" type="submit" value="로그인"></input>
+              <input class="btn sign-ins" type="submit" value="비밀번호 찾기"></input>
               <p>
-                <a href="./find.html"> 비밀번호를 잊으셨나요? </a>
+                <b><a href="./login.html"> 로그인 페이지로 돌아가기 </a></b>
               </p>
               <p>
-                <span> 어랏, 계정이 없으신가요? </span>
-                <b onclick="toggle()" class="pointer"> 회원가입 </b>
+                <b onclick="toggle()" class="pointer"> 아이디가 기억 안나신다면! </b>
               </p>
               <p>
                 <b onclick="location.href='index.html'" style="cursor: pointer">메인으로 돌아가기</b>
@@ -113,7 +84,7 @@
         <!-- SIGN IN CONTENT -->
         <div class="col align-items-center flex-col">
           <div class="text sign-in">
-            <h2>Welcome</h2>
+            <h2>비밀번호 찾기</h2>
           </div>
           <div class="img sign-in"></div>
         </div>
@@ -122,7 +93,7 @@
         <div class="col align-items-center flex-col">
           <div class="img sign-up"></div>
           <div class="text sign-up">
-            <h2>Be with us</h2>
+            <h2>아이디 찾기</h2>
           </div>
         </div>
         <!-- END SIGN UP CONTENT -->

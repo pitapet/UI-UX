@@ -119,4 +119,7 @@ $(document).ready(function () {
   }
 
   resolver.resolve(options, callback);
+
+  // 어바웃 어스
+  
 });
